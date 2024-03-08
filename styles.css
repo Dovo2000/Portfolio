@@ -150,10 +150,13 @@ header.index_header {
     width: 8rem;
     padding: 0.5rem 0.25rem;
     border-radius: 1rem;
+    border: 1px #aaa solid;
     cursor: pointer;
+    transition: all 0.2s ease-out;
   }
   li:hover {
     background-color: var(--light-secondary-bg-color);
+    border-color: var(--light-secondary-bg-color);
     a {
       color: var(--light-text-color);
     }
@@ -163,6 +166,7 @@ header.index_header {
 li.selected {
   background-color: var(--light-secondary-bg-color);
   color: var(--light-text-color);
+  border-color: var(--light-secondary-bg-color);
 }
 
 section {
@@ -190,19 +194,22 @@ section {
 }
 
 .introduction_title {
-  font-size: xx-large;
+  font-size: xxx-large;
   .introduction_title_span {
     color: var(--accent-color);
   }
 }
 
-.projects_section {
+.projects_section,
+.curriculum_section,
+.stack_div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   h2 {
     margin-inline: 2.5rem;
+    font-size: xx-large;
     width: 100%;
     text-align: center;
   }
@@ -212,9 +219,8 @@ section {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: 100%;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 2.5rem;
   margin-top: 2rem;
 }
 
@@ -224,24 +230,43 @@ section {
   height: 375px;
   background-position: center;
   background-size: cover;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
   overflow: hidden;
+  filter: saturate(20%);
   header {
     text-transform: uppercase;
+  }
+  &:hover {
+    filter: saturate(100%);
+    transform: scale(1.1);
   }
 }
 
 .card_content {
-  background-color: #00000076;
+  background-color: #00000088;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: flex-end;
   padding: 1rem;
-  transition: all 1s ease;
+  transition: all 0.5s ease;
 }
 
 .card_content:hover {
-  transform: scale(1.1);
-  background-color: #00000000;
+  background-color: #00000055;
+}
+
+.download_cv_btn {
+  background-color: var(--light-secondary-bg-color);
+  padding: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: all 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+.tech_div {
+  padding: 1rem 2rem;
 }
