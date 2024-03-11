@@ -18,7 +18,7 @@ h4 {
 }
 
 .content_wrap {
-  padding-bottom: 13rem; /*Este valor siempre por encima del HEIGHT del footer*/
+  padding-bottom: 14rem; /*Este valor siempre por encima del HEIGHT del footer*/
 }
 
 html,
@@ -171,6 +171,7 @@ li.selected {
 
 section {
   padding-top: 4rem;
+  margin-top: 6rem;
 }
 
 .hero_image {
@@ -239,6 +240,9 @@ section {
   &:hover {
     filter: saturate(100%);
     transform: scale(1.1);
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--light-secondary-bg-color),
+      0 0 0.8rem var(--light-secondary-bg-color), 0 0 2.8rem var(--light-secondary-bg-color),
+      inset 0 0 1.3rem var(--light-secondary-bg-color);
   }
 }
 
@@ -257,13 +261,26 @@ section {
 }
 
 .download_cv_btn {
-  background-color: var(--light-secondary-bg-color);
   padding: 1rem;
   font-weight: bold;
   border-radius: 6px;
+  border: 1px #aaa solid;
   transition: all 0.5s;
   &:hover {
-    transform: scale(1.1);
+    background-color: var(--light-secondary-bg-color);
+    border-color: var(--light-secondary-bg-color);
+  }
+}
+
+.stack_div {
+  margin-top: 2.5rem;
+  border: 2px var(--light-text-color) solid;
+  border-radius: 6px;
+  transition: all 0.5s ease;
+  &:hover {
+    box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem var(--accent-color),
+      0 0 0.8rem var(--accent-color), 0 0 2.8rem var(--accent-color),
+      inset 0 0 1.3rem var(--accent-color);
   }
 }
 
