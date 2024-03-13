@@ -287,3 +287,22 @@ section {
 .tech_div {
   padding: 1rem 2rem;
 }
+
+@media (max-width: 850px) {
+  .introduction_article {
+    width: auto;
+    padding-inline: 1rem;
+  }
+  .cards_container {
+    flex-direction: column;
+  }
+  .card {
+    width: 100vw;
+  }
+  .card:hover {
+    transform: scale(1);
+  }
+  .card_content {
+    padding: 2rem;
+  }
+}
