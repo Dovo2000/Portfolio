@@ -1,5 +1,20 @@
+@font-face {
+  font-family: "04b30";
+  src: url("Assets/Fonts/04B_30__.ttf");
+}
+
+@font-face {
+  font-family: "Windows_Command_Prompt";
+  src: url("Assets/Fonts/Windows-Command-Prompt.woff2") format("woff2"),
+    url("Assets/Fonts/Windows-Command-Prompt.woff") format("woff"),
+    url("Assets/Fonts/Windows-Command-Prompt.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
-  font-family: Tahoma, Calibri, sans-serif;
+  font-family: "Windows_Command_Prompt", Tahoma, Calibri, sans-serif;
   box-sizing: border-box;
   --accent-color: #eac435; /*#eac435*/
   --light-text-color: #fefcff;
@@ -15,6 +30,10 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
+  font-family: "04b30";
+  span {
+    font-family: "04b30";
+  }
 }
 
 .content_wrap {
@@ -52,6 +71,9 @@ body {
   border-radius: 1.5rem 1.5rem 0rem 0rem;
   background-color: #00000023;
   backdrop-filter: blur(5px);
+  h2 {
+    font-weight: 400;
+  }
 }
 
 address {
@@ -77,6 +99,7 @@ address a {
 
 p {
   text-wrap: pretty;
+  font-size: 24px;
 }
 
 a {
@@ -85,6 +108,7 @@ a {
   height: 100%;
   color: var(--light-text-color);
   text-decoration: none;
+  font-size: 22px;
 }
 a:hover {
   .gmail_logo {
@@ -194,11 +218,12 @@ section {
   width: 50%;
 }
 
+span {
+  color: var(--accent-color);
+}
+
 .introduction_title {
   font-size: xxx-large;
-  .introduction_title_span {
-    color: var(--accent-color);
-  }
 }
 
 .projects_section,
@@ -213,6 +238,9 @@ section {
     font-size: xx-large;
     width: 100%;
     text-align: center;
+  }
+  h3 {
+    font-weight: 100;
   }
 }
 
@@ -236,6 +264,7 @@ section {
   filter: saturate(20%);
   header {
     text-transform: uppercase;
+    text-shadow: var(--accent-color) 1px 0 5px;
   }
   &:hover {
     filter: saturate(100%);
@@ -262,7 +291,7 @@ section {
 
 .download_cv_btn {
   padding: 1rem;
-  font-weight: bold;
+  font-weight: normal;
   border-radius: 6px;
   border: 1px #aaa solid;
   transition: all 0.5s;
