@@ -1,9 +1,4 @@
 @font-face {
-  font-family: "04b30";
-  src: url("Assets/Fonts/04B_30__.ttf");
-}
-
-@font-face {
   font-family: "Windows_Command_Prompt";
   src: url("Assets/Fonts/Windows-Command-Prompt.woff2") format("woff2"),
     url("Assets/Fonts/Windows-Command-Prompt.woff") format("woff"),
@@ -14,7 +9,7 @@
 }
 
 * {
-  font-family: "Windows_Command_Prompt", Tahoma, Calibri, sans-serif;
+  font-family: Tahoma, Calibri, sans-serif;
   box-sizing: border-box;
   --accent-color: #eac435; /*#eac435*/
   --light-text-color: #fefcff;
@@ -30,9 +25,8 @@ h2,
 h3,
 h4 {
   text-wrap: balance;
-  font-family: "04b30";
   span {
-    font-family: "04b30";
+    font-family: "Windows_Command_Prompt";
   }
 }
 
@@ -108,7 +102,7 @@ a {
   height: 100%;
   color: var(--light-text-color);
   text-decoration: none;
-  font-size: 22px;
+  font-size: 18px;
 }
 a:hover {
   .gmail_logo {
@@ -262,6 +256,9 @@ span {
   transition: all 0.5s ease;
   overflow: hidden;
   filter: saturate(20%);
+  p {
+    font-size: 16px;
+  }
   header {
     text-transform: uppercase;
     text-shadow: var(--accent-color) 1px 0 5px;
@@ -322,11 +319,17 @@ span {
     width: auto;
     padding-inline: 1rem;
   }
+  .contact_footer {
+    position: relative;
+    left: 0;
+    translate: 0% 0%;
+  }
   .cards_container {
     flex-direction: column;
   }
   .card {
     width: 100vw;
+    filter: saturate(100%);
   }
   .card:hover {
     transform: scale(1);
