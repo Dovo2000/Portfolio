@@ -81,7 +81,7 @@ address a {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 4px;
+  gap: 0.25em;
   width: fit-content;
 }
 
@@ -93,7 +93,7 @@ address a {
 
 p {
   text-wrap: pretty;
-  font-size: 24px;
+  font-size: 1.5em;
 }
 
 a {
@@ -104,6 +104,7 @@ a {
   text-decoration: none;
   font-size: 18px;
 }
+
 a:hover {
   .gmail_logo {
     fill: #f1493c;
@@ -257,7 +258,7 @@ span {
   overflow: hidden;
   filter: saturate(20%);
   p {
-    font-size: 16px;
+    font-size: 1em;
   }
   header {
     text-transform: uppercase;
@@ -315,9 +316,17 @@ span {
 }
 
 @media (max-width: 850px) {
+  .about_section {
+    margin-top: 0;
+  }
+  .introduction_title {
+    font-size: 2.25em;
+  }
   .introduction_article {
     width: auto;
     padding-inline: 1rem;
+    font-size: 0.85em;
+    margin-bottom: 2em;
   }
   .contact_footer {
     position: relative;
@@ -339,6 +348,10 @@ span {
   }
   ul {
     flex-wrap: wrap;
+  }
+  .button_list {
+    padding-top: 0;
+    padding-bottom: 0;
   }
   .button_list li {
     width: 45%;
