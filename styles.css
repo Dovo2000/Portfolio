@@ -337,4 +337,10 @@ span {
   .card_content {
     padding: 2rem;
   }
+  ul {
+    flex-wrap: wrap;
+  }
+  .button_list li {
+    width: 45%;
+  }
 }
